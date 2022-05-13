@@ -14,7 +14,9 @@ public class OrderItems {
     @Column(name = "order_item_id")
     private long id;
 
-    private Item itme;
+    @ManyToOne
+    @JoinColumn(name="item_id")
+    private Item item;
 
     @ManyToOne
     @JoinColumn(name="order_id")
