@@ -13,7 +13,7 @@ public class Delivery {
     @Column(name = "delivery_id")
     private long id;
 
-    @OneToOne(mappedBy = "delivery")
+    @OneToOne(mappedBy = "delivery", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private Order order;
 
     @Embedded
