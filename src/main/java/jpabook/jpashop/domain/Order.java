@@ -15,7 +15,7 @@ public class Order {
 
     @Id @GeneratedValue
     @Column(name = "order_id")
-    private long id;
+    private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)  //EAGER의 경우 order select시 member의 모든 값을 select하기 때문에 LAZY로 셋팅함
     @JoinColumn(name = "member_id")
