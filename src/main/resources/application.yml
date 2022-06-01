@@ -7,7 +7,7 @@ spring:
 
   jpa:
     hibernate:
-      ddl-auto: none  #애플리케이션 실행시점에 테이블 새로 생성됨 - create, 새로 생성되지 않음 - none
+      ddl-auto: create  #애플리케이션 실행시점에 테이블 새로 생성됨 - create, 새로 생성되지 않음 - none
     properties:
       hibernate:
 #        show_sql: true  #system.out.println을 통해서 출력됨
