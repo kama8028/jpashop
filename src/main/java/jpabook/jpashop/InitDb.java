@@ -44,13 +44,6 @@ public class InitDb {
             em.persist(order);
         }
 
-        private Member createMember(String name, String city, String street, String zip) {
-            Member member = new Member();
-            member.setName(name);
-            member.setAddress(new Address(city, street, zip));
-            return member;
-        }
-
         public void dbInit2() {
             Member member = createMember("userB", "부산", "2222", "12345");
             em.persist(member);
@@ -68,6 +61,13 @@ public class InitDb {
             Order order = Order.createOrder(member, delivery, orderItem1, orderItem2);
             em.persist(order);
         }
+    }
+
+    private static Member createMember(String name, String city, String street, String zip) {
+        Member member = new Member();
+        member.setName(name);
+        member.setAddress(new Address(city, street, zip));
+        return member;
     }
 
     private static Delivery createDelivery(Member member) {
